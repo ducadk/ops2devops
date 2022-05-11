@@ -14,18 +14,18 @@ spec:
     spec:
       containers:
       - name: student4
-        image: registry.tanzu.dk/ops2devops/studentx:master
+        image: registry.tanzu.dk/ops2devops/student4:master
         imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: studentx
+  namespace: student4
 spec:
   type: NodePort
   selector:
-    app: studentx
+    app: student4
   ports:
   - port: 80
     targetPort: 80
