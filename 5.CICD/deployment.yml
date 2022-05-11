@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: studentx-deployment
-  namespace: studentx
+  name: student4-deployment
+  namespace: student4
 spec:
   selector:
     matchLabels:
-      app: studentx
+      app: student4
   template:
     metadata:
       labels:
-        app: studentx
+        app: student4
     spec:
       containers:
-      - name: studentx
+      - name: student4
         image: registry.tanzu.dk/ops2devops/studentx:master
         imagePullPolicy: Always
 ---
